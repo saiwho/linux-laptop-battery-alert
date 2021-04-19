@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 while true
 do
     battery_percentage=$((acpi -b | grep -P -o '[0-9]+(?=%)') | sort |  tail  -1)
@@ -14,8 +14,8 @@ do
     then
         export DISPLAY=:0.0
         notify-send -i "$PWD/battery_low.png" "Battery LOW" "Level: ${battery_percentage}%";
-        espeak "Please Connect the Adapter" -s 150
+        espeak "Battery Low, Please Connect the Adapter" -s 150
     fi
 
-    sleep 30 # (1 minutes)
+    sleep 60 # (1 minutes)
 done
