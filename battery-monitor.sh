@@ -17,5 +17,5 @@ do
         espeak "Battery Low, Please Connect the Adapter" -s 150
     fi
 
-    sleep 60 # (1 minutes)
+    sleep 600 # (10 minutes)
 done

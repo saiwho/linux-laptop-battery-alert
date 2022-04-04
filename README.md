@@ -5,6 +5,11 @@ A simple shell script for monitoring laptop's battery percentage
 * acpi
 * libnotify-bin
 * epeak
+Install dependencies using `requirements.sh` script,
+```
+chmod +x requirements.sh
+./requirements.sh
+```
 
 # Usage
 * Give permissions to the `battery-monitor.sh`
