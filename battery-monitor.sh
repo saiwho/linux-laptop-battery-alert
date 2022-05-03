@@ -7,15 +7,15 @@ do
     then
         export DISPLAY=:0.0
         notify-send -i "$PWD/battery_full.png" "Battery CHARGED" "Level: ${battery_percentage}%";
-        espeak "85% Charged, Please remove the adapter" -s 150
+        espeak "85% Charged, Please remove the adapter" -s 150;  
     fi
 
     if [[ $charger_online -eq 0 && $battery_percentage -lt 35 ]]
     then
         export DISPLAY=:0.0
         notify-send -i "$PWD/battery_low.png" "Battery LOW" "Level: ${battery_percentage}%";
-        espeak "Battery Low, Please Connect the Adapter" -s 150
+        espeak "Battery Low, Please Connect the Adapter" -s 150;
     fi
 
-    sleep 600 # (10 minutes)
+    sleep 120 # (2 minutes)
 done

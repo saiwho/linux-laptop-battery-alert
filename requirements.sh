@@ -1,5 +1,5 @@
 # Notifications
-sudo apt install libnotify-dev
+sudo apt install libnotify-bin
 
 # STDIN to Speech
 sudo apt install espeak
